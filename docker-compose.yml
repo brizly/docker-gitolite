@@ -1,12 +1,12 @@
-version: '3.2'
+version: '2.0'
 services:
   git:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    volumes:
-      - /root/dockSilo/volumes/git:/home/git
+    build: .
     image:
       gitolite:latest
     ports:
-      - "7999:22"
+    - "7999:22"
+    volumes:
+      - gitolite:/home/git
+volumes:
+    gitolite:

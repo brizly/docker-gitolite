@@ -1,4 +1,4 @@
-FROM arm32v7/fedora:27
+FROM fedora:27
 RUN dnf -y install gitolite3 openssh-server hostname findutils glibc-locale-source
 RUN localedef -v -c -i de_DE -f UTF-8 de_DE.UTF-8 || true
 RUN ssh-keygen -A
